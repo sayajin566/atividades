@@ -1,0 +1,31 @@
+### Create
+
+POST http://localhost:3333/shelf
+Content-Type: application/json
+
+{
+    "name": "",
+    "code": ""
+}
+
+### List By Id
+
+GET http://localhost:3333/shelf/<id>
+
+### List All
+
+GET http://localhost:3333/shelf
+
+### Update
+
+PUT http://localhost:3333/shelf/<id>
+Content-Type: application/json
+
+{
+    "name": "",
+    "code": ""
+}
+
+### Delete
+
+DELETE http://localhost:3333/shelf/<id>
