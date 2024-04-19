@@ -1,0 +1,31 @@
+### Create
+
+POST http://localhost:3333/library
+Content-Type: application/json
+
+{
+    "name": "biblioteca 155",
+    "cnpj": "123123123"
+}
+
+### List By Id
+
+GET http://localhost:3333/library/296e2381-c1a3-48a4-a26b-e24bb862ee2e
+
+### List All
+
+GET http://localhost:3333/library
+
+### Update
+
+PUT http://localhost:3333/library/296e2381-c1a3-48a4-a26b-e24bb862ee2e
+Content-Type: application/json
+
+{
+    "name": "novo nome",
+    "cnpj": "999999"
+}
+
+### Delete
+
+DELETE http://localhost:3333/library/dfba60f1-bab1-4eff-a27a-bc04613c3c9d

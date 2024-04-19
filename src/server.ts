@@ -2,6 +2,7 @@ import fastify from "fastify";
 import shelfRoutes from "./routes/shelf.routes";
 import bookRoutes from "./routes/book.routes";
 import cors from "@fastify/cors";
+import libraryRoutes from "./routes/library.routes";
 
 const server = fastify({ logger: true });
 
@@ -13,6 +14,10 @@ server.register(shelfRoutes, {
 
 server.register(bookRoutes, {
   prefix: "/book",
+});
+
+server.register(libraryRoutes, {
+  prefix: "/library",
 });
 
 server.listen(

@@ -6,12 +6,14 @@ import {
 } from "../schemas/shelf.schema";
 
 export class ShelfRepository {
-  async create({ name, code }: ShelfInputType): Promise<ShelfType> {
+  async create({ name, code, library }: ShelfInputType): Promise<ShelfType> {
     return await prisma.shelf.create({
       data: {
         name,
         code,
+        library_id: library.id,
       },
+      include: { library: true },
     });
   }
 
@@ -20,6 +22,7 @@ export class ShelfRepository {
       where: {
         id,
       },
+      include: { library: true },
     });
   }
 
@@ -31,6 +34,7 @@ export class ShelfRepository {
           { code: { contains: filters.code } },
         ],
       },
+      include: { library: true },
     });
   }
 
@@ -43,6 +47,7 @@ export class ShelfRepository {
         name,
         code,
       },
+      include: { library: true },
     });
   }
 
@@ -51,6 +56,7 @@ export class ShelfRepository {
       where: {
         id,
       },
+      include: { library: true },
     });
   }
 }

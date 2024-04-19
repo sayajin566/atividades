@@ -4,6 +4,11 @@ export const ShelfSchema = z.object({
   id: z.string().uuid(),
   name: z.string(),
   code: z.string().trim().min(1).max(2).toUpperCase(),
+  library: z.object({
+    id: z.string().uuid(),
+    name: z.string().optional(),
+    cnpj: z.string().optional(),
+  }),
   created_at: z.date(),
   updated_at: z.date(),
 });

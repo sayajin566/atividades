@@ -4,11 +4,11 @@ POST http://localhost:3333/book
 Content-Type: application/json
 
 {
-    "name": "",
-    "description": "",
-    "publishingCompany": "",
+    "name": "livro1",
+    "description": "descrição do livro 1",
+    "publishingCompany": "cedup",
     "shelf": {
-        "id": ""
+        "id": "b76e50dc-1b19-4b81-af58-093deffaed3f"
     }
 }
 

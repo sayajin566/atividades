@@ -4,8 +4,11 @@ POST http://localhost:3333/shelf
 Content-Type: application/json
 
 {
-    "name": "",
-    "code": ""
+    "name": "CEDUP",
+    "code": "CP",
+    "library": {
+        "id": "296e2381-c1a3-48a4-a26b-e24bb862ee2e"
+    }
 }
 
 ### List By Id
@@ -18,14 +21,19 @@ GET http://localhost:3333/shelf
 
 ### Update
 
-PUT http://localhost:3333/shelf/<id>
+PUT http://localhost:3333/shelf/b76e50dc-1b19-4b81-af58-093deffaed3f
 Content-Type: application/json
 
 {
-    "name": "",
-    "code": ""
+    "name": "Biblioteca 1",
+    "code": "b1",
+    "library": {
+        "id": "ae270b1d-76fa-4ddd-9d19-768810138122"
+    }
 }
+    
+
 
 ### Delete
 
-DELETE http://localhost:3333/shelf/<id>
+DELETE http://localhost:3333/shelf/936f29a3-ffaf-4252-977d-27b4222dfa13
